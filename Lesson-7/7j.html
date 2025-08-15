@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator till 5r</title>
+  </head>
+  <body>
+    <p>
+      <button onclick="UpdateCalculation('1');" >
+        1
+      </button>
+      <button
+        onclick="UpdateCalculation('2');"
+      >
+        2
+      </button>
+      <button
+        onclick="UpdateCalculation('3');"
+      >
+        3
+      </button>
+      <button
+        onclick="UpdateCalculation(' + ');"
+      >
+        +
+      </button>
+    </p>
+    <p>
+      <button
+        onclick="UpdateCalculation('4');"
+      >
+        4
+      </button>
+      <button
+        onclick="UpdateCalculation('5');"
+      >
+        5
+      </button>
+      <button
+        onclick="UpdateCalculation('6');"
+      >
+        6
+      </button>
+      <button
+        onclick="UpdateCalculation(' - ');"
+      >
+        -
+      </button>
+    </p>
+    <p>
+      <button
+        onclick="UpdateCalculation('7');"
+      >
+        7
+      </button>
+      <button
+        onclick="UpdateCalculation('8');"
+      >
+        8
+      </button>
+      <button
+        onclick="UpdateCalculation('9');"
+      >
+        9
+      </button>
+      <button
+        onclick="UpdateCalculation(' * ');"
+      >
+        *
+      </button>
+    </p>
+    <p>
+      <button
+        onclick="UpdateCalculation('0');"
+      >
+        0
+      </button>
+      <button
+        onclick="UpdateCalculation('.');"
+      >
+        .
+      </button>
+      <button
+        onclick="
+          try 
+          {
+            calculation = Function('return ' + calculation)();
+            console.log(`the result is ${calculation}`);
+          } 
+          catch (e) 
+          {
+            console.log('Invalid expression');
+            calculation = '';
+          }
+        "
+      >
+        =
+      </button>
+      <button
+        onclick="UpdateCalculation(' / ');"
+      >
+        /
+      </button>
+    </p>
+    <p>
+      <button
+        onclick="
+    calculation = '';
+    console.log(`Calculation cleared`);
+    "
+      >
+        Clear
+      </button>
+    </p>
+
+    <script>
+      var calculation = "";
+      function UpdateCalculation(value){
+        calculation += value;
+        console.log(calculation);
+      }
+    </script>
+  </body>
+</html>
