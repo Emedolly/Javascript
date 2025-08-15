@@ -1,0 +1,87 @@
+<!-- //with the below commented code while running the code in browser console score object is not getting updated so used the below code  -->
+<!-- <!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <button onclick="
+      playGame('heads');
+    ">heads</button>
+
+    <button onclick="
+      playGame('tails');
+    ">tails</button>
+
+    <script>
+      //localstorafe can only store string and not the objects so we need to convert it to string
+      //and then we can convert it back to object using JSON.parse
+      // We can use const here since score is a reference
+      // so we can modify it even if it uses const.
+      const score = JSON.parse(localStorage.getItem('score')) || {
+        wins: 0,
+        losses: 0
+      };
+
+      function playGame(guess) {
+        const randomNumber = Math.random();
+        const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+        console.log(guess === result ? 'You win!' : 'You lose!');
+
+        if (guess === result) {
+          score.wins++;
+        } else {
+          score.losses++;
+        }
+        console.log(score);
+
+        localStorage.setItem('score', JSON.stringify(score));
+      }
+    </script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <button onclick="playGame('heads')">heads</button>
+    <button onclick="playGame('tails')">tails</button>
+    <button onclick="resetScore()">Reset Score</button>
+    <div id="score"></div>
+
+    <script>
+      function getScore() {
+        return JSON.parse(localStorage.getItem('score')) || { wins: 0, losses: 0 };
+      }
+
+      function updateScoreDisplay() {
+        const score = getScore();
+        document.getElementById('score').textContent =
+          `Wins: ${score.wins}, Losses: ${score.losses}`;
+      }
+
+      function playGame(guess) {
+        const score = getScore();
+        const randomNumber = Math.random();
+        const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+        console.log(guess === result ? 'You win!' : 'You lose!');
+
+        if (guess === result) {
+          score.wins++;
+        } else {
+          score.losses++;
+        }
+        localStorage.setItem('score', JSON.stringify(score));
+        updateScoreDisplay();
+      }
+
+      function resetScore() {
+        localStorage.setItem('score', JSON.stringify({ wins: 0, losses: 0 }));
+        updateScoreDisplay();
+      }
+
+      // Initialize score display on page load
+      updateScoreDisplay();
+    </script>
+  </body>
+</html> 
