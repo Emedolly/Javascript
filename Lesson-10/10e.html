@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 10e,10f</title>
+  <style>
+    .Common-btn-style{
+      background-color: rgb(230,230,230);
+      border: none;
+      padding: 10px 15px;
+      font-weight: 12px;
+      border-radius: 5px;
+      margin-right: 8px;
+      cursor: pointer;
+    }
+    .is-toggled{
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+<button class="Common-btn-style js-button"
+onclick="
+toggleButton(document.querySelector('.js-button'));
+"
+>Gaming</button>
+<button class="Common-btn-style js-Music-button"
+onclick="toggleButton(document.querySelector('.js-Music-button'));"
+>Music</button>
+<button class="Common-btn-style js-Tech-button"
+onclick="toggleButton(document.querySelector('.js-Tech-button'));"
+>Tech</button>
+<script>
+  function toggleButton(button) {
+    if (!button.classList.contains('is-toggled')) {
+      button.classList.add('is-toggled');
+    } else {
+      button.classList.remove('is-toggled');
+    }
+  }
+</script>
+</body>
+</html>
