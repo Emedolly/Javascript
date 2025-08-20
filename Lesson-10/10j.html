@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10j</title>
+    <link rel="stylesheet" href="10j.css" />
+  </head>
+
+  <body>
+    <p class="js-calculation calculation"></p>
+    <p>
+      <button
+        class="calculator-button gray-button"
+        onclick="UpdateCalculation('1');"
+      >
+        1
+      </button>
+      <button
+        class="calculator-button gray-button"
+        onclick="UpdateCalculation('2');"
+      >
+        2
+      </button>
+      <button
+        class="calculator-button gray-button"
+        onclick="UpdateCalculation('3');"
+      >
+        3
+      </button>
+      <button
+        class="calculator-button orange-button"
+        onclick="UpdateCalculation(' + ');"
+      >
+        +
+      </button>
+    </p>
+    <p>
+      <button
+        class="calculator-button gray-button"
+        onclick="UpdateCalculation('4');"
+      >
+        4
+      </button>
+      <button
+        class="calculator-button gray-button"
+        onclick="UpdateCalculation('5');"
+      >
+        5
+      </button>
+      <button
+        class="calculator-button gray-button"
+        onclick="UpdateCalculation('6');"
+      >
+        6
+      </button>
+      <button
+        class="calculator-button orange-button"
+        onclick="UpdateCalculation(' - ');"
+      >
+        -
+      </button>
+    </p>
+    <p>
+      <button
+        class="calculator-button gray-button"
+        onclick="UpdateCalculation('7');"
+      >
+        7
+      </button>
+      <button
+        class="calculator-button gray-button"
+        onclick="UpdateCalculation('8');"
+      >
+        8
+      </button>
+      <button
+        class="calculator-button gray-button"
+        onclick="UpdateCalculation('9');"
+      >
+        9
+      </button>
+      <button
+        class="calculator-button orange-button"
+        onclick="UpdateCalculation(' * ');"
+      >
+        *
+      </button>
+    </p>
+    <p>
+      <button
+        class="calculator-button gray-button"
+        onclick="UpdateCalculation('0');"
+      >
+        0
+      </button>
+      <button
+        class="calculator-button gray-button"
+        onclick="UpdateCalculation('.');"
+      >
+        .
+      </button>
+      <button
+        class="calculator-button gray-button"
+        onclick="
+          try 
+          {
+            calculation = Function('return ' + calculation)();
+            console.log(`the result is ${calculation}`);
+          } 
+          catch (e) 
+          {
+            console.log('Invalid expression');
+            calculation = '';
+          }
+          DisplayCalculation();
+          localStorage.setItem('calculation', calculation);
+        "
+      >
+        =
+      </button>
+      <button
+        class="calculator-button orange-button"
+        onclick="UpdateCalculation(' / ');"
+      >
+        /
+      </button>
+    </p>
+    <p>
+      <button
+        class="calculator-button gray-button clear-button"
+        onclick="calculation = '';
+        DisplayCalculation();
+        localStorage.setItem('calculation', calculation);"
+      >
+        Clear
+      </button>
+    </p>
+
+    <script src="10j.js"></script>
+  </body>
+</html>
