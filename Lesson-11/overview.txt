@@ -1,1 +1,8 @@
 Arrays and loops practise
+
+Using array index can retreive and update an element 
+
+To get the last index item we will use .length-1 which will return the position of the array index but have use the array variable name so that we can get the actual array index item 
+
+.push will overwrite the existing array and the original one is mutated 
+and we will use this to add items at the end or to modify something 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 11c</title>
+</head>
+<body>
+<script>
+  function arraySwap(array){
+    const lastIndex = array.length-1;
+
+    const lastVallue = array[lastIndex];
+const firstIndex = array[0];
+  
+array[0] = lastVallue;
+array[lastIndex] = firstIndex;
+
+    return array;
+  }
+
+  
+  console.log(arraySwap([1,2,3,4,5]));
+</script>
+</body>
+</html>
