@@ -6,3 +6,6 @@ To get the last index item we will use .length-1 which will return the position 
 
 .push will overwrite the existing array and the original one is mutated 
 and we will use this to add items at the end or to modify something 
+
+
+practise this lesson again to get technical knowledge more
