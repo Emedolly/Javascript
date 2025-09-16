@@ -1,1 +1,45 @@
 variables practise folder in this lesson-5
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 5a</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+1.charset = character set.
+
+"UTF-8" is a universal encoding system that supports almost all languages (English, Hindi, Telugu, emojis, symbols ✅).
+
+Without this, some characters might display incorrectly (e.g., “?” instead of “é” or “₹”).
+
+Example: if you use Telugu text హలో, it will render properly because of UTF-8.
+
+2.This controls responsive design (how the website looks on mobile, tablet, desktop).
+
+width=device-width → sets the page width to match the device’s screen size.
+
+initial-scale=1.0 → ensures no zooming by default.
+
+Without this, your site might look tiny or zoomed out on phones.
+
+Example: On a phone, without this tag → your layout might shrink; with it → it adapts nicely.
+
+This will makes the website mobile-friendly and responsive 
+
+3.<meta> tags, the name attribute tells the browser what kind of information the tag is describing.
+
+Here, viewport means: “I’m giving you settings about how the page should be displayed on different screens (desktop, mobile, tablet).”
+
+So this tag is specifically telling the browser how to control the visible area of the webpage — called the viewport.
+
+examPle : 5L:
+JavaScript's Function('return ' + calculation)() (or eval) can handle both "1+2" and "1 + 2", but adding spaces makes the expression more readable in the console and easier to debug.
+If you ever want to split the string into tokens (numbers and operators), spaces make it easier:
+Example: "1 + 2 - 3" splits nicely into ["1", "+", "2", "-", "3"].
+Why not spaces for numbers and decimal?
+Numbers and decimals should be together (e.g., "3.14", not "3 . 14").
+If you add spaces, "3 . 14" would be invalid in JavaScript and would cause errors.
+Summary:
+
+Spaces for operators: For readability and easier parsing.
+No spaces for numbers/decimals: To keep numbers valid and together.

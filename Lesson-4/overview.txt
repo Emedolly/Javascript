@@ -1,1 +1,8 @@
 Html css review,conosle.log
+
+<button class="Add-to-cart-button">Add to cart</button> = this is called internal CSS where the css is written inside a <style> block in the same HTML file\
+
+<button style="background-color: green; color: white;">Add to cart</button> = this is called Inline CSS where css style is directly written in the HTML tag using sytle attribute
+
+External CSS = where the css is stored in a separate .css file and linked with <link rel="stylesheet" href="styles.css"> in the head element section of the respective Html
+ 
